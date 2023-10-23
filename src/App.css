@@ -1,0 +1,81 @@
+@import 'typeface-montserrat';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* .container {
+  text-align: center;
+} */
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  width: 100%;
+  outline: none;
+}
+
+button[type='submit'] {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  background-color: white;
+}
+
+table {
+  margin-top: 50px;
+  padding: 20px 20px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+th, td {
+  border: none;
+  padding: 5px;
+  text-align: center;
+}
+
+button[type='button'] {
+  border: 1px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button.delete-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px; 
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+button.restore-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px; 
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
