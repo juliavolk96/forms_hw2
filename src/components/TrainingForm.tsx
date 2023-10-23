@@ -6,29 +6,34 @@ interface TrainingFormProps {
 }
 
 function TrainingForm(props: TrainingFormProps) {
-  const [date, setDate] = useState('');
-  const [distance, setDistance] = useState('');
+  const [date, setDate] = useState<string>('');
+  const [distance, setDistance] = useState<number>(0);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    props.onAddTraining(date, parseFloat(distance));
+    props.onAddTraining(date, distance);
     setDate('');
-    setDistance('');
-  };
+    setDistance(0);
+  }
+
   return (
     <form onSubmit={handleSubmit}>
-      <input 
-      type='text' 
-      placeholder='Дата (DD.MM.YYYY)'
-      value={date}
-      onChange={(e) => setDate(e.target.value)}
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        className="custom-input"
       />
-      <input type='number'
-      placeholder='километры'
-      value={distance}
-      onChange={(e) => setDistance(e.target.value)}
+      <input
+        type="number"
+        placeholder="километры"
+        value={distance}
+        onChange={(e) => setDistance(parseFloat(e.target.value))}
+        min={0}
+        step={0.1}
+        className="custom-input"
       />
-      <button type='submit'>ОК</button>
+      <button type="submit">ОК</button>
     </form>
   );
 }
